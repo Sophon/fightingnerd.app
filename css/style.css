@@ -12,6 +12,8 @@ header {
     color: white;
     background-color: #1F2937;
     padding: 4px 64px;
+    position: sticky;
+    top: 0;
 }
 
 ul {
@@ -126,4 +128,6 @@ footer {
     color: white;
     text-align: center;
     font-size: 12px;
+    position: sticky;
+    bottom: 0;
 }

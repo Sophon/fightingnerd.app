@@ -1,19 +1,54 @@
+:root {
+    --accent: #EF0D33;
+    --accent-hover: #FF1A40;
+    --accent-pressed: #CC0B2C;
+    --background: #080808;
+    --surface: #181818;
+    --surface-high: #282828;
+    --surface-pressed: #333333;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A6A6A6;
+    --text-tertiary: #666666;
+    --text-disabled: #666666;
+    --divider: #666666;
+    --divider-subtle: #333333;
+    --success: #30D158;
+    --warning: #FFD60A;
+    --error: #FF453A;
+    --scrim: #000000;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: var(--background, black);
+    color: var(--text-primary);
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    background-color: #1F2937;
     padding: 4px 64px;
     position: sticky;
     top: 0;
+    background-color: var(--background, black);
+}
+
+h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 48px;
+    color: var(--accent, red);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
 }
 
 ul {
@@ -24,17 +59,16 @@ ul {
 
 a {
     text-decoration: none;
-    color: lightgray;
+    color: var(--text-secondary, darkgray);
 }
 
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    color: white;
-    background-color: #1F2937;
     padding: 8px 64px 64px;
     gap: 16px;
+    background-color: var(--background, black);
 }
 
 .hero-content,
@@ -43,14 +77,15 @@ a {
 }
 
 .hero-image {
-    background-color: darkgray;
+    color: var(--text-secondary);
+    background-color: var(--surface, darkgray);
     align-content: center;
     text-align: center;
 }
 
 button {
-    background-color: #3882F6;
-    color: white;
+    background-color: var(--accent, red);
+    color: var(--text-primary);
     border: none;
     border-radius: 8px;
     padding: 8px 32px;
@@ -77,7 +112,7 @@ button {
 .card img {
     width: 100%;
     height: auto;
-    border: 2px solid red;
+    border: 2px solid var(--divider, darkgray);
     border-radius: 16px;
 }
 
@@ -86,7 +121,7 @@ button {
 }
 
 .quote {
-    background-color: lightgray;
+    background-color: var(--surface);
     padding: 64px 192px;
 }
 
@@ -111,21 +146,19 @@ blockquote {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3882F6;
+    background-color: var(--surface-high);
     padding: 16px 64px;
     border-radius: 8px;
-    color: white;
 }
 
 .action .button-outlined {
-    border: 1px solid white;
-    background-color: #3882F6;
+    border: 1px solid var(--text-primary);
+    background-color: transparent;
 }
 
 footer {
     padding: 16px;
-    background-color: #1F2937;
-    color: white;
+    color: var(--text-tertiary);
     text-align: center;
     font-size: 12px;
     position: sticky;
